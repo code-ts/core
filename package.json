@@ -1,0 +1,38 @@
+{
+  "name": "@code-ts/monorepo",
+  "version": "0.0.0",
+  "private": true,
+  "packageManager": "pnpm@8.5.0",
+  "scripts": {
+    "build": "turbo run build --filter=\"./packages/*\"",
+    "coverage": "vitest --coverage",
+    "dev": "npm run --filter=\"./packages/*\" --parallel dev",
+    "lint": "ESLINT_USE_FLAT_CONFIG=true eslint -c eslint.config.mjs --max-warnings 0 .",
+    "prepare": "husky install",
+    "release": "bumpp && pnpm publish",
+    "test": "vitest",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@ntnyq/eslint-config": "2.0.0-beta.9",
+    "@ntnyq/prettier-config": "^1.7.3",
+    "@types/node": "^20.1.2",
+    "@vitest/coverage-c8": "^0.31.0",
+    "bumpp": "^9.1.0",
+    "eslint": "^8.40.0",
+    "eslint-define-config": "^1.20.0",
+    "fast-glob": "^3.2.12",
+    "husky": "^8.0.3",
+    "nano-staged": "^0.8.0",
+    "prettier": "^2.8.8",
+    "tsup": "^6.7.0",
+    "tsx": "^3.12.7",
+    "turbo": "^1.9.3",
+    "typescript": "^5.0.4",
+    "vitest": "^0.31.0"
+  },
+  "prettier": "@ntnyq/prettier-config",
+  "nano-staged": {
+    "*.{js,ts,mjs,cjs,json,md,yml,yaml}": "pnpm run lint --fix"
+  }
+}

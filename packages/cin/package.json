@@ -1,0 +1,41 @@
+{
+  "name": "@code-ts/cin",
+  "version": "0.0.0",
+  "description": "Utils about citizen identification number | 公民身份证号码工具方法",
+  "keywords": [
+    "code-ts",
+    "cin",
+    "id-card",
+    "parse",
+    "validate",
+    "身份证号码",
+    "解析",
+    "校验"
+  ],
+  "license": "MIT",
+  "author": {
+    "name": "ntnyq",
+    "email": "ntnyq13@gmail.com"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs"
+    },
+    "./*": "./*"
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup && tsx ../../scripts/postbuild.mts",
+    "dev": "DEV=1 tsup"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
