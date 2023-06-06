@@ -1,6 +1,6 @@
 {
   "name": "@code-ts/monorepo",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "private": true,
   "packageManager": "pnpm@8.6.1",
   "scripts": {
@@ -9,7 +9,7 @@
     "dev": "npm run --filter=\"./packages/*\" --parallel dev",
     "lint": "ESLINT_USE_FLAT_CONFIG=true eslint -c eslint.config.mjs .",
     "prepare": "husky install",
-    "release": "bumpp && pnpm publish",
+    "release": "bumpp && pnpm -r publish --access public",
     "test": "vitest",
     "typecheck": "vitest typecheck"
   },

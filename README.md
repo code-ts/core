@@ -1,7 +1,7 @@
 # code-ts
 
-[![CI](https://github.com/ntnyq/code-ts/workflows/CI/badge.svg)](https://github.com/ntnyq/code-ts/actions)
-[![LICENSE](https://img.shields.io/github/license/ntnyq/code-ts.svg)](https://github.com/ntnyq/code-ts/blob/main/LICENSE)
+[![CI](https://github.com/code-ts/core/workflows/CI/badge.svg)](https://github.com/code-ts/core/actions)
+[![LICENSE](https://img.shields.io/github/license/code-ts/core.svg)](https://github.com/code-ts/core/blob/main/LICENSE)
 
 ## packages
 
