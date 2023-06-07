@@ -1,0 +1,16 @@
+{
+  "files": [],
+  "references": [
+    {
+      "path": "./tsconfig.lib.json"
+    },
+    {
+      "path": "./tsconfig.test.json"
+    }
+  ],
+  "compilerOptions": {
+    "emitDeclarationOnly": false,
+    "incremental": true,
+    "tsBuildInfoFile": "/Users/ntnyq/Desktop/github/qxy/code-ts/node_modules/.pnpm/vitest@0.31.4/node_modules/vitest/dist/tsconfig.tmp.tsbuildinfo"
+  }
+}
