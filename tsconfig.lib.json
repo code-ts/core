@@ -2,9 +2,16 @@
   "extends": ["./tsconfig.base.json"],
   "compilerOptions": {
     "composite": true,
-    "lib": ["DOM", "ES2020"],
-    "types": ["node"]
+    "lib": ["DOM", "ES2022"],
+    "types": ["node"],
+    "checkJs": true
   },
-  "include": ["./packages/**/*.js", "./packages/**/*.ts", "./scripts/*.ts", "tsup.config.ts"],
+  "include": [
+    "./packages/**/*.js",
+    "./packages/**/*.ts",
+    "./scripts/*.ts",
+    "**/tsup.config.ts",
+    "./eslint.config.mjs"
+  ],
   "exclude": ["**/bin", "**/dist", "**/tests"]
 }
