@@ -13,12 +13,12 @@ const CIN_MOD = 11
 /**
  * 公民身份证号码字符集
  */
-const CIN_CHARS = ['1', '0', 'X', '9', '8', '7', '6', '5', '4', '3', '2']
+const CIN_PARITY = ['1', '0', 'X', '9', '8', '7', '6', '5', '4', '3', '2']
 
 /**
  * 公民身份证号码加权因子
  */
-const CIN_WEIGHTS = [7, 9, 10, 5, 8, 4, 2, 1, 6, 3, 7, 9, 10, 5, 8, 4, 2]
+const CIN_FACTORS = [7, 9, 10, 5, 8, 4, 2, 1, 6, 3, 7, 9, 10, 5, 8, 4, 2]
 
 /**
  * 校验公民身份证号码
@@ -38,7 +38,7 @@ export function validateCIN(code: string) {
   const sum = code
     .split('')
     .filter((_, idx) => idx < 17)
-    .reduce((acc, char, idx) => acc + Number.parseInt(char, 10) * CIN_WEIGHTS[idx], 0)
+    .reduce((acc, char, idx) => acc + Number.parseInt(char, 10) * CIN_FACTORS[idx], 0)
 
-  return CIN_CHARS[sum % CIN_MOD] === code.charAt(17).toUpperCase()
+  return CIN_PARITY[sum % CIN_MOD] === code.charAt(17).toUpperCase()
 }

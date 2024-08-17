@@ -2,8 +2,9 @@ import { defineConfig } from 'vitest/config'
 
 export default defineConfig({
   test: {
+    reporters: 'dot',
     coverage: {
-      reporter: ['html', 'json', 'lcov', 'clover'],
+      reporter: ['json', 'lcov', 'clover'],
     },
   },
 })

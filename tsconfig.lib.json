@@ -10,7 +10,7 @@
     "./packages/**/*.js",
     "./packages/**/*.ts",
     "./scripts/*.ts",
-    "**/tsup.config.ts",
+    "**/build.config.ts",
     "./eslint.config.mjs"
   ],
   "exclude": ["**/bin", "**/dist", "**/tests"]
