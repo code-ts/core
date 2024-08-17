@@ -4,7 +4,6 @@ import type { ParseResult } from './types'
 /**
  * parse cin
  * @param code code to parse
- * @param options parse options
  * @returns parsed result `ParseResult`
  *
  * @example

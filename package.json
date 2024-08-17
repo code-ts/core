@@ -3,13 +3,13 @@
   "type": "module",
   "version": "0.0.2",
   "private": true,
-  "packageManager": "pnpm@8.12.1",
+  "packageManager": "pnpm@9.7.1",
   "scripts": {
     "build": "turbo run build --filter=\"./packages/*\"",
     "coverage": "vitest --coverage",
     "dev": "npm run --filter=\"./packages/*\" --parallel dev",
-    "lint": "ESLINT_USE_FLAT_CONFIG=true eslint -c eslint.config.mjs .",
-    "prepare": "husky install",
+    "lint": "eslint .",
+    "prepare": "husky",
     "prepublishOnly": "pnpm run build",
     "release": "run-s release:check release:version release:publish",
     "release:check": "run-s lint typecheck test",
@@ -19,24 +19,24 @@
     "typecheck": "vitest --typecheck"
   },
   "devDependencies": {
-    "@ntnyq/eslint-config": "2.0.0-beta.23",
-    "@ntnyq/prettier-config": "^1.20.0",
-    "@types/node": "^20.10.5",
-    "@vitest/coverage-v8": "^1.1.0",
-    "bumpp": "^9.2.1",
-    "eslint": "^8.56.0",
-    "husky": "^8.0.3",
+    "@ntnyq/eslint-config": "^3.0.0-beta.2",
+    "@ntnyq/prettier-config": "^1.21.2",
+    "@types/node": "^22.4.0",
+    "@vitest/coverage-v8": "^2.0.5",
+    "bumpp": "^9.5.1",
+    "eslint": "^9.9.0",
+    "husky": "^9.1.4",
     "nano-staged": "^0.8.0",
-    "npm-run-all": "^4.1.5",
-    "prettier": "^3.1.1",
-    "tsup": "^8.0.1",
-    "tsx": "^4.7.0",
-    "turbo": "^1.11.2",
-    "typescript": "^5.3.3",
-    "vitest": "^1.1.0"
+    "npm-run-all2": "^6.2.2",
+    "prettier": "^3.3.3",
+    "tsup": "^8.2.4",
+    "tsx": "^4.17.0",
+    "turbo": "^2.0.14",
+    "typescript": "^5.5.4",
+    "vitest": "^2.0.5"
   },
   "prettier": "@ntnyq/prettier-config",
   "nano-staged": {
-    "*.{js,ts,mjs,cjs,json,md,yml,yaml}": "pnpm run lint --fix"
+    "*.{js,ts,mjs,cjs,json,md,yml,yaml}": "eslint --fix"
   }
 }

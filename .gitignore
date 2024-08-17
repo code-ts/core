@@ -2,8 +2,10 @@
 node_modules
 *.log*
 *.local
+
 dist
 coverage
+
 .eslintcache
 *.tsbuildinfo
 .turbo
