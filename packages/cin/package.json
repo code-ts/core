@@ -3,14 +3,14 @@
   "version": "0.0.3",
   "description": "Utils about citizen identification number | 公民身份证号码工具方法",
   "keywords": [
-    "code-ts",
     "cin",
+    "code-ts",
     "id-card",
     "parse",
     "validate",
-    "身份证号码",
+    "校验",
     "解析",
-    "校验"
+    "身份证号码"
   ],
   "license": "MIT",
   "author": {
@@ -18,10 +18,10 @@
     "email": "ntnyq13@gmail.com"
   },
   "homepage": "https://github.com/code-ts/core#readme",
+  "repository": "code-ts/core",
   "bugs": {
     "url": "https://github.com/code-ts/core/issues"
   },
-  "repository": "code-ts/core",
   "exports": {
     "./package.json": "./package.json",
     ".": {
@@ -41,11 +41,11 @@
   "files": [
     "dist"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "build": "unbuild",
     "dev": "unbuild --stub"
-  },
-  "publishConfig": {
-    "access": "public"
   }
 }

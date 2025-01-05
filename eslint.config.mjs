@@ -1,3 +1,5 @@
-import { ntnyq } from '@ntnyq/eslint-config'
+// @ts-check
 
-export default ntnyq()
+import { defineESLintConfig } from '@ntnyq/eslint-config'
+
+export default defineESLintConfig()

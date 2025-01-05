@@ -22,7 +22,7 @@ const CIN_FACTORS = [7, 9, 10, 5, 8, 4, 2, 1, 6, 3, 7, 9, 10, 5, 8, 4, 2]
 
 /**
  * 校验公民身份证号码
- * @param code 公民身份证号码
+ * @param code - 公民身份证号码
  * @returns 是否有效
  *
  * @example

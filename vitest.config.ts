@@ -4,7 +4,7 @@ export default defineConfig({
   test: {
     reporters: 'dot',
     coverage: {
-      reporter: ['json', 'lcov', 'clover'],
+      reporter: ['json', 'lcov'],
     },
   },
 })
