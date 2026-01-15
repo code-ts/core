@@ -1,5 +1,6 @@
 {
   "name": "@code-ts/cin",
+  "type": "module",
   "version": "0.0.3",
   "description": "Utils about citizen identification number | 公民身份证号码工具方法",
   "keywords": [
@@ -25,18 +26,11 @@
   "exports": {
     "./package.json": "./package.json",
     ".": {
-      "import": {
-        "types": "./dist/index.d.mts",
-        "default": "./dist/index.mjs"
-      },
-      "require": {
-        "types": "./dist/index.d.cts",
-        "default": "./dist/index.cjs"
-      }
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
     }
   },
-  "main": "./dist/index.mjs",
-  "module": "./dist/index.mjs",
+  "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "files": [
     "dist"
@@ -45,7 +39,7 @@
     "access": "public"
   },
   "scripts": {
-    "build": "unbuild",
-    "dev": "unbuild --stub"
+    "build": "tsdown",
+    "dev": "tsdown --watch"
   }
 }

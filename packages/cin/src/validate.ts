@@ -32,13 +32,20 @@ const CIN_FACTORS = [7, 9, 10, 5, 8, 4, 2, 1, 6, 3, 7, 9, 10, 5, 8, 4, 2]
  * ```
  */
 export function validateCIN(code: string) {
-  if (code.length !== CIN_LENGTH) return false
-  if (!CIN_PATTERN.test(code)) return false
+  if (code.length !== CIN_LENGTH) {
+    return false
+  }
+  if (!CIN_PATTERN.test(code)) {
+    return false
+  }
 
   const sum = code
     .split('')
     .filter((_, idx) => idx < 17)
-    .reduce((acc, char, idx) => acc + Number.parseInt(char, 10) * CIN_FACTORS[idx], 0)
+    .reduce(
+      (acc, char, idx) => acc + Number.parseInt(char, 10) * CIN_FACTORS[idx],
+      0,
+    )
 
   return CIN_PARITY[sum % CIN_MOD] === code.charAt(17).toUpperCase()
 }
